@@ -20,10 +20,10 @@ class Joint():
 class F_k():
 
 
-    def get_proj_mat(self,joint1,joint2):
-        c_theta = np.cos(joint1.theta)
-        f1 = joint1.frame
-        f2 = joint2.frame
+    def get_proj_mat(self,j1_theta,frame1,frame2): #[[0,x],[0,z],[0,y]]
+        c_theta = np.cos(j1_theta)
+        f1 = frame1
+        f2 = frame2
         final_proj_mat = None
         for i in range(0,3):
             pro_mt = [[], [], []]
